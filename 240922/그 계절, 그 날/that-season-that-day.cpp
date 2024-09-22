@@ -34,7 +34,7 @@ int main() {
     cin >> y >> m >> d;
 
     if(isVaildDate(y, m, d)) cout << getSeason(m);
-    else cout << "-1";
+    else cout << -1;
 
     return 0;
 }
