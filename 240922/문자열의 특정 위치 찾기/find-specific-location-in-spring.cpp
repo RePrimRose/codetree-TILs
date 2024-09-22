@@ -4,13 +4,12 @@ using namespace std;
 
 int main() {
     // 여기에 코드를 작성해주세요.
-    string str;
-    char c;
+    string str1, str2;
 
-    cin >> str >> c;
+    cin >> str1 >> str2;
 
-    if(str.find(c) != string::npos) {
-        cout << str.find(c);
+    if(str1.find(str2) != string::npos) {
+        cout << str1.find(str2);
     }
 
     return 0;
