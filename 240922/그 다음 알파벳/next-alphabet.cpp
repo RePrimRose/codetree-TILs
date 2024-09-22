@@ -6,7 +6,8 @@ int main() {
     char c;
 
     cin >> c;
-    c++;
+    if(c == 'z') c = 'a';
+    else c++;
     cout << c;
 
     return 0;
