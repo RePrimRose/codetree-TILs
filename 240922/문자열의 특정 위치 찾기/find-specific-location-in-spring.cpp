@@ -10,7 +10,7 @@ int main() {
 
     if(str1.find(str2) != string::npos) {
         cout << str1.find(str2);
-    }
+    } else cout << "No";
 
     return 0;
 }
