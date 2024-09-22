@@ -10,7 +10,7 @@ int findGCD(int n, int m) {
         m = tmp;
     }
 
-    for(int i = 2; i < m; i++) {
+    for(int i = 1; i < m; i++) {
         if(n % i == 0 && m % i == 0) gcd = i;
     }
 
