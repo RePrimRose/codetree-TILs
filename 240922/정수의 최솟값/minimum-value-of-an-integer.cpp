@@ -7,7 +7,7 @@ int min(int a, int b, int c) {
         else return c;
     } else {
         if(b < c) return b;
-        else return b;
+        else return c;
     }
 }
 
