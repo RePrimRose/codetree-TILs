@@ -5,8 +5,8 @@ int arr[100];
 
 int max(int n) {
     if(n == 0) return arr[n];
-
-    return (arr[n] > max(n - 1)) ? arr[n] : max(n - 1);
+    int num = max(n - 1);
+    return (arr[n] > num) ? arr[n] : num;
 }
 
 int main() {
