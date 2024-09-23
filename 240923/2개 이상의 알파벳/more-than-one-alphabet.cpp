@@ -12,7 +12,7 @@ bool containsAtLeastTwoLetters(string &str, bool isUsed[]) {
         if(isUsed[i]) sum++;
     }
 
-    return sum > 0;
+    return sum > 1;
 }
 
 int main() {
