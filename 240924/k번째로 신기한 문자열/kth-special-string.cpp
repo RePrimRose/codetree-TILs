@@ -17,7 +17,7 @@ int main() {
 
         cin >> str;
 
-        if(str.find(t) != string::npos) {
+        if(str.find(t) == 0) {
             arr.push_back(str);
         }
     }
