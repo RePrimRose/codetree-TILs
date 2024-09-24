@@ -15,12 +15,12 @@ int main() {
 
     sort(arr, arr + 2 * n);
 
-    int max = 0;
+    int maxNum = 0;
     for(int i = 0; i < n; i++) {
-        max = (max, arr[i] + arr[2 * n - i - 1]);
+        maxNum = max(maxNum, arr[i] + arr[2 * n - i - 1]);
     }
 
-    cout << max;
+    cout << maxNum;
 
     return 0;
 }
