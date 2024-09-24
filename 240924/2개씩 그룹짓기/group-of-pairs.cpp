@@ -17,7 +17,7 @@ int main() {
 
     int max = 0;
     for(int i = 0; i < n; i++) {
-        max = (max, arr[i] + arr[2 * n - (i + 1)]);
+        max = (max, arr[i] + arr[2 * n - i - 1]);
     }
 
     cout << max;
