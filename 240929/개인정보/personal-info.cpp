@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <iomanip>
 using namespace std;
 
 class Information{
@@ -38,6 +39,8 @@ int main() {
         information[i].height = height;
         information[i].weight = weight;
     }
+
+    cout << fixed << setprecision(1);
 
     sort(information, information + 5, cmpByName);
 
