@@ -15,6 +15,9 @@ class Seq{
 };
 
 bool cmp(Seq a, Seq b) {
+    if(a.num == b.num) {
+        return a.pos < b.pos;
+    }
     return a.num < b.num;
 }
 
