@@ -29,7 +29,7 @@ int main() {
     }
 
     int cnt = 0;
-    for(int i = 1; i < 2001; i++) {
+    for(int i = 0; i < 2001; i++) {
         if(arr[i] > 1) cnt++;
     }
 
