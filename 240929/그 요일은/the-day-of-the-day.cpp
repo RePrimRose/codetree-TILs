@@ -37,11 +37,12 @@ int main() {
     } else if(weekName == "Sun") {
         m1Days += 6;
     }
-
-    cnt = (m2Days - m1Days) / 7 + 1;
-
-    if(cnt < 0) cout << 0;
-    else cout << cnt;
+    
+    if(m2Days - m1Days < 0) cout << 0;
+    else {
+        cnt = (m2Days - m1Days) / 7 + 1;
+        cout << cnt;
+    }
 
     return 0;
 }
