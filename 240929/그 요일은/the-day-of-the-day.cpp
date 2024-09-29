@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int numsOfDays[13] = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
@@ -37,7 +38,7 @@ int main() {
         m1Days += 6;
     }
 
-    cnt = (m2Days - m1Days) / 7 + 1;
+    cnt = abs(m2Days - m1Days) / 7 + 1;
 
     cout << cnt;
 
