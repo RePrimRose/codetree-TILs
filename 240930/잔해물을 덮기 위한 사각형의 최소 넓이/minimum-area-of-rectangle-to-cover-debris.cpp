@@ -30,17 +30,24 @@ int main() {
         }
     }
 
-    int min_x = x1[0];
-    int min_y = y1[0];
+    int min_x = 2000;
+    int min_y = 2000;
     int max_x = 0;
     int max_y = 0;
     for(int i = 0; i <= MAX_R; i++) {
         for(int j = 0; j <= MAX_R; j++) {
             if(checked[i][j] == 1) {
+                min_x = min(min_x, i);
+                min_y = min(min_y, j);
                 max_x = max(max_x, i + 1);
                 max_y = max(max_y, j + 1);
             }
         }
+    }
+
+    if(min_x == 2000 && min_y == 2000) {
+        min_x = 0;
+        min_y = 0;
     }
     
     cout << (max_x - min_x) * (max_y - min_y);
