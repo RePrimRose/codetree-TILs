@@ -46,7 +46,7 @@ int main() {
     }
 
     bool isMeet = false;
-    for(int i = 1; i <= elapsedTime; i++) {
+    for(int i = 1; i < elapsedTime; i++) {
         if(a[i] == b[i]) {
             cout << i;
             isMeet = true;
