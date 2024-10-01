@@ -15,7 +15,7 @@ int main() {
     }
 
     int cnt = 0, maxCnt = 0;
-    for(int i = 1; i < n; i++) {
+    for(int i = 0; i < n; i++) {
         if(arr[i] != arr[i - 1]) {
             maxCnt = max(maxCnt, cnt);
             cnt = 0;
