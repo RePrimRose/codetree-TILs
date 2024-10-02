@@ -38,7 +38,10 @@ int main() {
         head = 'A';
     } else if(a[1] < b[1]) {
         head = 'B';
-    } else head = 'S';
+    } else {
+        head = 'S';
+        cnt = -1;
+    }
 
     for(int i = 2; i <= 1000000; i++) {
         if(a[i] == 0) break;
