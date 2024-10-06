@@ -47,7 +47,7 @@ int main() {
     int finalPos = max(timeA, timeB);
 
     int ans = 0;
-    for(int i = 1; i <= finalPos; i++) {
+    for(int i = 1; i < finalPos; i++) {
         if(a[i] == b[i] && a[i - 1] != b[i - 1]) ans++;
     }
 
