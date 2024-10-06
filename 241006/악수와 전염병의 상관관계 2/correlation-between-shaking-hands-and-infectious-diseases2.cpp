@@ -21,7 +21,7 @@ int main() {
     sort(timeLine, timeLine + t, cmp);
 
     d[p].first = 1;
-    d[p].second = 2;
+    d[p].second = k;
 
     for(int i = 0; i < t; i++) {
         int a = timeLine[i].second.first;
@@ -32,7 +32,7 @@ int main() {
                 d[a].second--;
                 if(d[b].first == 0) {
                     d[b].first = 1;
-                    d[b].second = 2;
+                    d[b].second = k;
                     continue;
                 }
             }
@@ -43,7 +43,7 @@ int main() {
                 d[b].second--;
                 if(d[a].first == 0) {
                     d[a].first = 1;
-                    d[a].second = 2;
+                    d[a].second = k;
                 }
             }
         }
