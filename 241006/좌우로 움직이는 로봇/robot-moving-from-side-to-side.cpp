@@ -49,7 +49,7 @@ int main() {
     }
 
     for(int i = timeB; i < MAX_RANGE; i++) {
-        a[i] = a[timeB - 1];
+        b[i] = b[timeB - 1];
     }
 
     int ans = 0;
