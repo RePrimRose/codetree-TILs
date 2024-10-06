@@ -25,7 +25,7 @@ int main() {
             int cnt = 0;
             for(int dir = 0; dir < 4; dir++) {
                 int nx = i + dx[dir], ny = j + dy[dir];
-                if(InRange(i, j) && arr[nx][ny]) cnt++;
+                if(InRange(nx, ny) && arr[nx][ny]) cnt++;
             }
             
             if(cnt >= 3) ans++;
