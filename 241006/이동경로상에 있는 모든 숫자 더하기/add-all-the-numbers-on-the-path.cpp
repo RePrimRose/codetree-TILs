@@ -3,12 +3,12 @@
 using namespace std;
 
 int arr[99][99];
-int dx[4] = {1, 0, -1, 0}, dy[4] = {0, -1, 0, 1};
-int dir = 1;
+int dx[4] = {0, 1, 0, -1}, dy[4] = {1, 0, -1, 0};
+int dir = 3;
 int n, t;
 
 bool InRange(int x, int y) {
-    return 0 <= x && x < n && 0 <= y && y < x;
+    return 0 <= x && x < n && 0 <= y && y < n;
 }
 
 int main() {
@@ -26,7 +26,7 @@ int main() {
     int x = n / 2, y = n / 2;
     int sum = arr[x][y];
 
-    for(int i = 0; i < order.size(); i++) {
+    for(int i = 0; i < t; i++) {
         if(order[i] == 'R') dir = (dir + 1) % 4;
         else if(order[i] == 'L') dir = (dir - 1 + 4) % 4;
         else {
