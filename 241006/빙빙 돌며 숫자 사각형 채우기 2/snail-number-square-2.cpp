@@ -13,7 +13,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
     cin >> n >> m;
 
-    int x = 0, y = 0, dir = 2;
+    int x = 0, y = 0, dir = 1;
     ans[x][y] = 1;
 
     for(int i = 2; i <= n * m; i++) {
