@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 #define MAX_RANGE 1000001
@@ -43,8 +44,10 @@ int main() {
         }
     }
 
+    int finalPos = max(timeA, timeB);
+
     int ans = 0;
-    for(int i = 1; i < MAX_RANGE; i++) {
+    for(int i = 1; i <= finalPos; i++) {
         if(a[i] == b[i] && a[i - 1] != b[i - 1]) ans++;
     }
 
