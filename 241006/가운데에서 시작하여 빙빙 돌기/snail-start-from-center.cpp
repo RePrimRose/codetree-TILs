@@ -13,13 +13,13 @@ int main() {
     // 여기에 코드를 작성해주세요.
     cin >> n;
 
-    int x = n / 2, y = n / 2, dir = 0;
-    ans[x][y] = 1;
+    int x = n - 1, y = n - 1, dir = 2;
+    ans[x][y] = n * n;
 
-    for(int i = 2; i <= n * n; i++) {
+    for(int i = n * n - 1; i > 0; i--) {
         int nx = x + dx[dir], ny = y + dy[dir];
 
-        if(!InRange(nx, ny) || ans[nx][ny] != 0) dir = (dir - 1 + 4) % 4;
+        if(!InRange(nx, ny) || ans[nx][ny] != 0) dir = (dir + 1) % 4;
 
         x = x + dx[dir]; y = y + dy[dir];
         ans[x][y] = i;
