@@ -28,6 +28,10 @@ int main() {
         }
     }
 
+    for(int i = timeA; i < MAX_RANGE; i++) {
+        a[i] = a[timeA - 1];
+    }
+
     int timeB = 1;
     for(int i = 0; i < m; i++) {
         int t;
@@ -44,10 +48,12 @@ int main() {
         }
     }
 
-    int finalPos = max(timeA, timeB);
+    for(int i = timeB; i < MAX_RANGE; i++) {
+        a[i] = a[timeB - 1];
+    }
 
     int ans = 0;
-    for(int i = 1; i < finalPos; i++) {
+    for(int i = 1; i < MAX_RANGE; i++) {
         if(a[i] == b[i] && a[i - 1] != b[i - 1]) ans++;
     }
 
