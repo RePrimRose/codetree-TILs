@@ -5,8 +5,8 @@ int n;
 int dx[4] = {-1, 0, 0, 1}, dy[4] = {0, -1, 1, 0};
 
 int getDir(char c) {
-    if(c == 'U') return 2;
-    if(c == 'D') return 1;
+    if(c == 'U') return 1;
+    if(c == 'D') return 2;
     if(c == 'L') return 0;
     if(c == 'R') return 3;
 }
