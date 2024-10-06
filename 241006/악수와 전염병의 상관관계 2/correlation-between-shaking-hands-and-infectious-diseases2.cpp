@@ -33,6 +33,7 @@ int main() {
                 if(d[b].first == 0) {
                     d[b].first = 1;
                     d[b].second = 2;
+                    continue;
                 }
             }
         }
