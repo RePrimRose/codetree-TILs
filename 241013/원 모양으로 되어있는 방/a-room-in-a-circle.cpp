@@ -19,7 +19,7 @@ int main() {
     for(int i = 0; i < n; i++) {
         int sumDistance = 0;
         for(int j = 0; j < n; j++) {
-            sumDistance += (j - i + 5) % 5 * arr[j];
+            sumDistance += (j - i + n) % n * arr[j];
         }
         minDistance = min(minDistance, sumDistance);
     }
