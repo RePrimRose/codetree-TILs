@@ -30,6 +30,17 @@ int main() {
         }
     }
 
+    if(n > 5) {
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n - 3; j++) {
+                for(int k = j + 3; k < n; k++) {
+                    maxCoins = max(maxCoins, arr[i][j] + arr[i][j + 1] + arr[i][j + 2] +
+                        arr[i][k] + arr[i][k + 1] + arr[i][k + 2]);
+                }
+            }
+        }
+    }
+
     cout << maxCoins;
 
     return 0;
