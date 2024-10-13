@@ -33,7 +33,7 @@ int main() {
                         else break;
                         x = nx; y = ny;
                     }
-                    if(cnt == 2) ans++;
+                    if(cnt > 1) ans++;
                 }
             }
         }
