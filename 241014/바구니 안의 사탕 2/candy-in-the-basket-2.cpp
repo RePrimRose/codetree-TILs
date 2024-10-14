@@ -19,7 +19,7 @@ int main() {
     }
 
     int ans = INT_MIN;
-    for(int i = k; i <= MAX - k; i++) {
+    for(int i = k; i < MAX; i++) {
         int sum = 0;
         for(int j = i - k; j <= i + k; j++) {
             sum += arr[j];
