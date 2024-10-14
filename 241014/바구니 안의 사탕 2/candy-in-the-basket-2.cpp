@@ -3,7 +3,7 @@
 #include <algorithm>
 using namespace std;
 
-#define MAX 100
+#define MAX 101
 
 int n, k;
 int arr[MAX];
@@ -19,7 +19,7 @@ int main() {
     }
 
     int ans = INT_MIN;
-    for(int i = k; i < MAX; i++) {
+    for(int i = k; i <= MAX - k; i++) {
         int sum = 0;
         for(int j = i - k; j <= i + k; j++) {
             sum += arr[j];
