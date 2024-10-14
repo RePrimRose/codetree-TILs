@@ -22,7 +22,7 @@ int main() {
 
     int ans = 0;
     for(int i = 0; i <= n - m; i++) {
-        for(int j = i; j < i + 3; j++) {
+        for(int j = i; j < i + m; j++) {
             aSub[j - i] = A[j];
         }
         sort(aSub, aSub + 3);
