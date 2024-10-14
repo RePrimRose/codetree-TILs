@@ -25,7 +25,7 @@ int main() {
         for(int j = i; j < i + m; j++) {
             aSub[j - i] = A[j];
         }
-        sort(aSub, aSub + 3);
+        sort(aSub, aSub + m);
         int cnt = 0;
         for(int j = 0; j < m; j++) {
             if(B[j] == aSub[j]) cnt++;
