@@ -16,7 +16,7 @@ int getDiff(int i, int j, int k, int l) {
     int biggestTeam = max(sumTeamOne, max(sumTeamTwo, sumTeamThree));
     int smallestTeam = min(sumTeamOne, min(sumTeamTwo, sumTeamThree));
 
-    if(sumTeamOne == sumTeamTwo && sumTeamTwo == sumTeamThree) return INT_MAX;
+    if(sumTeamOne == sumTeamTwo || sumTeamTwo == sumTeamThree || sumTeamOne == sumTeamThree) return INT_MAX;
     else return biggestTeam - smallestTeam;
 }
 
