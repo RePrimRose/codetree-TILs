@@ -18,7 +18,7 @@ int main() {
     for(int i = 0; i < n; i++) {
         int sumCost = 0;
         for(int j = i; j < i + t; j++) {
-            sumCost += abs(t - arr[j]);
+            sumCost += abs(h - arr[j]);
         }
         minCost = min(minCost, sumCost);
     }
