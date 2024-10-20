@@ -7,8 +7,8 @@ using namespace std;
 
 int n, m, d, s;
 bool eaten_count[MAX][MAX];
-pair<int, pair<int, int>> eaten_record[MAX];
-pair<int, int> sick_record[MAX_RECORD];
+pair<int, pair<int, int>> eaten_record[MAX_RECORD];
+pair<int, int> sick_record[MAX];
 
 int main() {
     // 여기에 코드를 작성해주세요.
