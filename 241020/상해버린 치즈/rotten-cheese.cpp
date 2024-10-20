@@ -34,9 +34,14 @@ int main() {
     for(int i = 1; i <= m; i++) {
         if(eaten_count[i] == s) {
             int cnt = 0;
+            bool who_eaten[MAX] = {};
             for(int j = 0; j < d; j++) {
+                int eaten_person = eaten_record[j].first;
                 int eaten_cheese = eaten_record[j].second.first;
-                if(eaten_cheese == i) cnt++;
+                if(eaten_cheese == i && !who_eaten[eaten_person]) {
+                    who_eaten[eaten_person] = true;
+                    cnt++;
+                }
             }
             ans = max(ans, cnt);
         }
