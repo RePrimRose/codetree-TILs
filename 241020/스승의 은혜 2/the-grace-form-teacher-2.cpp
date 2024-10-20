@@ -22,7 +22,7 @@ int main() {
         for(int j = 0; j < n; j++) {
             if(i == j) b_copy -= p[j] / 2;
             else b_copy -= p[j];
-            if(b_copy < 1) break;
+            if(b_copy < -1) break;
             cnt++;
         }
         ans = max(ans, cnt);
