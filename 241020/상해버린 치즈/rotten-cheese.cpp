@@ -6,7 +6,7 @@ using namespace std;
 #define MAX_RECORD 1000
 
 int n, m, d, s;
-int eaten_count[MAX];
+bool eaten_count[MAX][MAX];
 pair<int, pair<int, int>> eaten_record[MAX];
 pair<int, int> sick_record[MAX_RECORD];
 
@@ -27,16 +27,20 @@ int main() {
             int eaten_person = eaten_record[j].first; 
             int eaten_cheese = eaten_record[j].second.first;
             int eaten_time = eaten_record[j].second.second;
-            if(sick_person == eaten_person && eaten_time < sick_time && !who_eaten[eaten_person]) {
-                who_eaten[eaten_person] = true;
-                eaten_count[eaten_cheese]++;
-            }
+            if(sick_person == eaten_person && eaten_time < sick_time) eaten_count[i][eaten_cheese] = true;
         }
     }
 
     int ans = 0;
     for(int i = 1; i <= m; i++) {
-        if(eaten_count[i] == s) {
+        bool possible = true;
+        for(int j = 0; j < s; j++) {
+            if(!eaten_count[j][i]) {
+                possible = false;
+                break;
+            }
+        }
+        if(possible) {
             int cnt = 0;
             bool who_eaten[MAX] = {};
             for(int j = 0; j < d; j++) {
