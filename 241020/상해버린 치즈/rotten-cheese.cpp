@@ -22,11 +22,15 @@ int main() {
 
     for(int i = 0; i < s; i++) {
         int sick_person = sick_record[i].first, sick_time = sick_record[i].second;
+        bool who_eaten[MAX] = {};
         for(int j = 0; j < d; j++) {
             int eaten_person = eaten_record[j].first; 
             int eaten_cheese = eaten_record[j].second.first;
             int eaten_time = eaten_record[j].second.second;
-            if(sick_person == eaten_person && eaten_time < sick_time) eaten_count[eaten_cheese]++;
+            if(sick_person == eaten_person && eaten_time < sick_time && !who_eaten[eaten_person]) {
+                who_eaten[eaten_person] = true;
+                eaten_count[eaten_cheese]++;
+            }
         }
     }
 
