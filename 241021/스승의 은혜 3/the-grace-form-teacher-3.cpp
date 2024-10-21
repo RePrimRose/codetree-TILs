@@ -28,7 +28,7 @@ int main() {
             if(i == j) sum_budget += student[j].first / 2 + student[j].second;
             else sum_budget += student[j].first + student[j].second;
 
-            if(sum_budget >= b) break;
+            if(sum_budget > b) break;
             cnt++;
         }
 
