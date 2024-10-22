@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <cstdlib>
+#include <climits>
 #include <vector>
 using namespace std;
 
@@ -8,13 +9,25 @@ int t, a, b;
 vector<int> s, n;
 
 bool check_special(int pos) {
+    int s_pos, n_pos;
+    int temp = INT_MAX;
+    
     for(int i = 0; i < s.size(); i++) {
-        int d1 = abs(pos - s[i]);
-        for(int j = 0; j < n.size(); j++) {
-            int d2 = abs(pos - n[j]);
-            if(d1 <= d2) return true;
+        if(temp > abs(pos - s[i])) {
+            s_pos = i;
+            temp = abs(pos - s[i]);
         }
     }
+
+    temp = INT_MAX;
+    for(int i = 0; i < s.size(); i++) {
+        if(temp > abs(pos - n[i])) {
+            n_pos = i;
+            temp = abs(pos - n[i]);
+        }
+    }
+
+    if(abs(pos - s[s_pos]) <= abs(pos - n[n_pos])) return true;
 
     return false;
 }
