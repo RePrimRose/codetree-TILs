@@ -20,7 +20,7 @@ bool check_special(int pos) {
     }
 
     temp = INT_MAX;
-    for(int i = 0; i < s.size(); i++) {
+    for(int i = 0; i < n.size(); i++) {
         if(temp > abs(pos - n[i])) {
             n_pos = i;
             temp = abs(pos - n[i]);
