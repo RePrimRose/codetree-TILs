@@ -12,9 +12,11 @@ bool x3() {
         for(int j = i + 1; j <= 10; j++) {
             bool isPossible = true;
             for(int k = j + 1; k <= 10; k++) {
-                if(x[i] != i && x[i] != j && x[i] != k) {
+                for(int l = 0; l < n; l++) {
+                    if(x[l] != i && x[l] != j && x[l] != k) {
                     isPossible = false;
                     break;
+                    }
                 }
             }
             if(isPossible) return true;
@@ -29,9 +31,11 @@ bool y3() {
         for(int j = i + 1; j <= 10; j++) {
             bool isPossible = true;
             for(int k = j + 1; k <= 10; k++) {
-                if(y[i] != i && y[i] != j && y[i] != k) {
+                for(int l = 0; l < n; l++) {
+                    if(y[l] != i && y[l] != j && y[l] != k) {
                     isPossible = false;
                     break;
+                    }
                 }
             }
             if(isPossible) return true;
@@ -46,9 +50,11 @@ bool x2y1() {
         for(int j = i + 1; j <= 10; j++) {
             bool isPossible = true;
             for(int k = 0; k <= 10; k++) {
-                if(x[i] != i && x[i] != j && y[i] != k) {
+                for(int l = 0; l < n; l++) {
+                    if(x[l] != i && x[l] != j && y[l] != k) {
                     isPossible = false;
                     break;
+                    }
                 }
             }
             if(isPossible) return true;
@@ -63,9 +69,11 @@ bool x1y2() {
         for(int j = i + 1; j <= 10; j++) {
             bool isPossible = true;
             for(int k = 0; k <= 10; k++) {
-                if(y[i] != i && y[i] != j && x[i] != k) {
+                for(int l = 0; l < n; l++) {
+                    if(y[l] != i && y[l] != j && x[l] != k) {
                     isPossible = false;
                     break;
+                    }
                 }
             }
             if(isPossible) return true;
