@@ -18,18 +18,20 @@ int main() {
 
     sort(arr, arr + n);
 
-    int ans;
-    for (int i = 1; i <= n; i++) {
-        int max_num = INT_MIN;
-        int min_num = INT_MAX;
+    int ans = 0;
+    for (int start = 0; start < n; start++) {
+        for (int i = 1; i <= n - start; i++) {
+            int max_num = INT_MIN;
+            int min_num = INT_MAX;
 
-        for (int j = 0; j < i; j++) {
-            max_num = max(max_num, arr[j]);
-            min_num = min(min_num, arr[j]);
+            for (int j = start; j < start + i; j++) {
+                max_num = max(max_num, arr[j]);
+                min_num = min(min_num, arr[j]);
+            }
+
+            if (max_num - min_num > k) break;
+            ans = max(ans, i);
         }
-
-        if (max_num - min_num > k) break;
-        ans = i;
     }
 
     cout << ans;
