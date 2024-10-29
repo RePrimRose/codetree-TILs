@@ -18,7 +18,7 @@ bool IsPossible(int max_val) {
         }
     }
 
-    if(available_rocks[0] != 1) return false;
+    if(cnt == 0 || available_rocks[0] != 1 || available_rocks[cnt - 1] != n) return false;
 
     for(int i = 1; i < cnt; i++) {
         int dist = available_rocks[i] - available_rocks[i - 1];
