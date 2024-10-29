@@ -14,7 +14,7 @@ bool isPossible(int a) {
     int curr_num = a;
     for(int i = 0; i < n - 1; i++) {
         curr_num = abs(arr[i] - curr_num);
-        if(isUsed[curr_num]) return false;
+        if(isUsed[curr_num] || curr_num == 0) return false;
         else isUsed[curr_num] = true;
     }
 
