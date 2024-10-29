@@ -21,15 +21,15 @@ int main() {
         for (int j = i + 1; j < n; j++) {
             if (str[j] == '1') continue;
 
-            string seat = str;
-            seat[j] = '1';
+            string seat_copy = seat;
+            seat_copy[j] = '1';
 
             int distance = 0;
             int min_distance = INT_MAX;
             int seat_count = 0;
 
             for (int k = 0; k < n; k++) {
-                seat_count += seat[k] - '0';
+                seat_count += seat_copy[k] - '0';
 
                 if (seat_count == 1) distance++;
                 if (seat_count == 2) {
