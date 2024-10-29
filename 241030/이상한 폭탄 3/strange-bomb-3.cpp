@@ -19,12 +19,12 @@ int main() {
     for(int i = 0; i < n; i++) {
         int cnt = 0;
 
-        for(int j = i + 1; j <= i + k + 1; j++) {
+        for(int j = i + 1; j <= i + k; j++) {
             if(j == n) break;
             if(bomb[i] == bomb[j]) cnt++;
         }
 
-        if(cnt >= max_cnt && cnt > 0) {
+        if(cnt >= max_cnt && cnt != 0) {
             max_cnt = cnt;
             ans = max(ans, bomb[i]);
         }
