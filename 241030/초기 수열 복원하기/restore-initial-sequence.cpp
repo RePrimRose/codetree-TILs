@@ -2,7 +2,7 @@
 #include <cstdlib>
 using namespace std;
 
-#define MAX 1000
+#define MAX 2001
 
 int n;
 int arr[MAX];
