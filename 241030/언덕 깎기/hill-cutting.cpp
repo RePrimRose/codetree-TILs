@@ -21,7 +21,7 @@ int main() {
         int sum = 0;
         for(int j = 0; j < n; j++) {
             if(arr[j] < i) sum += (i - arr[j]) * (i - arr[j]);
-            if(arr[j] > i) sum += (arr[j] - (i + 17)) * (arr[j] - (i + 17));
+            if(arr[j] > i + 17) sum += (arr[j] - (i + 17)) * (arr[j] - (i + 17));
         }
         ans = min(ans, sum);
     }
