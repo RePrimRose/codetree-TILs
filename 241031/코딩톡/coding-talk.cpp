@@ -16,13 +16,19 @@ int main() {
         cin >> c[i] >> u[i];
     }
 
-    int target_u = u[p - 1];
-    for(int i = p - 1; i >= 0; i--) {
-        if(u[i] == target_u) people[c[i] - 'A'] = true;
-    }
+    if(u[p - 1] == 0) {
+        for(int i = 0; i < n; i++) {
+            people[i] = true;
+        }
+    } else {
+        int target_u = u[p - 1];
+        for(int i = p - 1; i >= 0; i--) {
+            if(u[i] == target_u) people[c[i] - 'A'] = true;
+        }
 
-    for(int i = p - 1; i < n; i++) {
-        people[c[i] - 'A'] = true;
+        for(int i = p - 1; i < n; i++) {
+            people[c[i] - 'A'] = true;
+        }
     }
 
     for(int i = 0; i < n; i++) {
