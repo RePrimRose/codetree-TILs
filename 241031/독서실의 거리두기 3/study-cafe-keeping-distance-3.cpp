@@ -24,8 +24,7 @@ int main() {
         }
     }
 
-    if(max_dist % 2 == 0) cout << max_dist / 2;
-    else cout << max_dist / 2 + 1;
+    cout << max_dist / 2;
 
     return 0;
 }
