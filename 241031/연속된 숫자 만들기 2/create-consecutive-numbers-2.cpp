@@ -16,7 +16,7 @@ int main() {
     sort(people, people + MAX);
 
     if(people[2] - people[1] == 1 && people[1] - people[0] == 1) cout << 0;
-    else if(people[2] - people[1] > 2 && people[1] - people[0] > 1) cout << 2;
+    else if(people[2] - people[1] > 2 && people[1] - people[0] > 2) cout << 2;
     else cout << 1;
 
 
