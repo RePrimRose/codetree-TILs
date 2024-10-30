@@ -26,7 +26,7 @@ int main() {
             if(u[i] == target_u) people[c[i] - 'A'] = true;
         }
 
-        for(int i = p - 1; i < n; i++) {
+        for(int i = p - 1; i < m; i++) {
             people[c[i] - 'A'] = true;
         }
     }
