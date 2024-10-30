@@ -14,15 +14,14 @@ int main() {
         cin >> x1[i] >> x2[i];
     }
 
-    int cnt = 0;
+    bool isPossible = true; 
     for(int i = 0; i < n; i++) {
         for(int j = i + 1; j < n; j++) {
-            if(x2[i] < x1[j] || x2[j] < x1[i]) continue;
-            cnt++;
+            if(x2[i] < x1[j] || x2[j] < x1[i]) isPossible = false;;
         }
     }
 
-    if(cnt == n) cout << "Yes";
+    if(isPossible) cout << "Yes";
     else cout << "No";
 
     return 0;
