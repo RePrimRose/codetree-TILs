@@ -17,8 +17,8 @@ int main() {
     int ans = 0;
     while(true) {
         int first = people[0], second = people[1], third = people[2];
-        
-        if(second - 1 > first) {
+
+        if(second - 1 > first && third - second < second - first) {
             people[2] = second - 1;
             ans++;
         } else if(second + 1 < third) {
