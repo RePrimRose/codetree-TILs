@@ -15,16 +15,12 @@ int main() {
     sort(people, people + MAX);
 
     int ans = 0;
-    while(true) {
-        int first = people[0], second = people[1], third = people[2];
+    int first = people[0], second = people[1], third = people[2];
 
-        if(second - 1 > first && third - second < second - first) {
-            ans = second - first - 1;
-        } else if(second + 1 < third) {
-            ans = third - second - 1;
-        }
-
-        break;
+    if(second - 1 > first && third - second < second - first) {
+        ans = second - first - 1;
+    } else if(second + 1 < third) {
+        ans = third - second - 1;
     }
 
     cout << ans;
