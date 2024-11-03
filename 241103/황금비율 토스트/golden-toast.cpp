@@ -29,6 +29,7 @@ int main() {
             it++;
         }
         else if (order == 'D') {
+            if (it == l.end()) continue;
             l.erase(it);
         }
         else {
