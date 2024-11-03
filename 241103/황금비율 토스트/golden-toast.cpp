@@ -1,18 +1,18 @@
 #include <iostream>
-#include <string>
 #include <list>
 using namespace std;
 
-list<char> l;
-string str;
-int n, m;
-
 int main() {
     // 여기에 코드를 작성해주세요.
-    cin >> n >> m >> str;
+    list<char> l;
+    int n, m;
+
+    cin >> n >> m;
 
     for (int i = 0; i < n; i++) {
-        l.push_back(str[i]);
+        char c;
+        cin >> c;
+        l.push_back(c);
     }
 
     list<char>::iterator it = l.end();
@@ -29,7 +29,6 @@ int main() {
             it++;
         }
         else if (order == 'D') {
-            if (it == l.end()) continue;
             l.erase(it);
         }
         else {
