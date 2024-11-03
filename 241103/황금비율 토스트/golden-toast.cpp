@@ -2,11 +2,11 @@
 #include <list>
 using namespace std;
 
+list<char> l;
+int n, m;
+
 int main() {
     // 여기에 코드를 작성해주세요.
-    list<char> l;
-    int n, m;
-
     cin >> n >> m;
 
     for (int i = 0; i < n; i++) {
@@ -21,15 +21,13 @@ int main() {
         cin >> order;
 
         if (order == 'L') {
-            if (it == l.begin()) continue;
-            it--;
+            if (it != l.begin()) it--;
         }
         else if (order == 'R') {
-            if (it == l.end()) continue;
-            it++;
+            if (it != l.end()) it++;
         }
         else if (order == 'D') {
-            l.erase(it);
+            if (it != l.end()) it = l.erase(it);
         }
         else {
             char c;
