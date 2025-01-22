@@ -12,7 +12,7 @@ int main() {
     cin >> n >> m;
     cin >> s;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < s.length(); i++) {
         l.push_back(s[i]);
     }
 
@@ -35,7 +35,6 @@ int main() {
         } else {
             if(it == l.end()) continue;
             l.erase(it);
-            it--;
         }
     }
 
