@@ -35,6 +35,7 @@ int main() {
         } else {
             if(it == l.end()) continue;
             l.erase(it);
+            it--;
         }
     }
 
