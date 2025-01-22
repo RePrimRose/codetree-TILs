@@ -32,7 +32,7 @@ int main() {
         } else if (command == 'R') {
             if(it != l.end())
                 it++;
-        } else {
+        } else if (command == 'D') {
             if(it != l.end())
                 l.erase(it);
         }
