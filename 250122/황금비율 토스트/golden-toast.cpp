@@ -12,7 +12,7 @@ int main() {
     cin >> n >> m;
     cin >> s;
 
-    for (int i = 0; i < s.length(); i++) {
+    for (int i = 0; i < n; i++) {
         l.push_back(s[i]);
     }
 
@@ -27,14 +27,14 @@ int main() {
             cin >> c;
             l.insert(it, c);
         } else if (command == 'L') {
-            if(it == l.begin()) continue;
-            it--;
+            if(it != l.begin()) 
+                it--;
         } else if (command == 'R') {
-            if(it == l.end()) continue;
-            it++;
+            if(it != l.end())
+                it++;
         } else {
-            if(it == l.end()) continue;
-            l.erase(it);
+            if(it != l.end())
+                l.erase(it);
         }
     }
 
