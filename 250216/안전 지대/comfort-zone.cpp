@@ -59,7 +59,7 @@ int main() {
     // Write your code here!
     int answer = 0;
 
-    for (int k = 1; k < max_k; k++) {
+    for (int k = 1; k <= max_k; k++) {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 if (can_go(i, j, k)) {
