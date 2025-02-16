@@ -10,12 +10,12 @@ bool visited[25][25];
 vector<int> v;
 
 bool inRange(int x, int y) {
-    return (x >= n && x >= 0) && (y >= n && y >= 0);
+    return (x < n && x >= 0) && (y < n && y >= 0);
 }
 
 bool canGo(int x, int y) {
+    if(!inRange(x, y)) return false;
     if(visited[x][y] || grid[x][y] == 0) return false;
-    if(inRange(x, y)) return false;
     return true;
 }
 
