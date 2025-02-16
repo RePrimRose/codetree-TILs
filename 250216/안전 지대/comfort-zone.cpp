@@ -70,9 +70,9 @@ int main() {
         reset_visited();
     }
 
-    int area = 0;
+    int area = -1;
 
-    for (int k = 1; k < max_k; k++) {
+    for (int k = 1; k <= max_k; k++) {
         if(area < safe_area[k]) {
             area = safe_area[k];
             answer = k;
