@@ -4,8 +4,8 @@
 using namespace std;
 
 int n, m;
-int a[101][101];
-bool visited[101][101];
+int a[100][100];
+bool visited[100][100];
 queue<pair<int, int>> q;
 
 bool in_range(int x, int y) {
@@ -29,13 +29,13 @@ void bfs() {
 
         int x = curr_pos.first;
         int y = curr_pos.second;
-        visited[x][y] = true;
 
         for (int i = 0; i < 4; i++) {
             int nx = x + dx[i];
             int ny = y + dy[i];
 
             if(can_go(nx, ny)) {
+                visited[nx][ny] = true;
                 q.push({nx, ny});
             }
         }
