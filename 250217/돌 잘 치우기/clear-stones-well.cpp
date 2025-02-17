@@ -97,8 +97,8 @@ int main() {
         }
 
         for (int j = 0; j < k; j++) {
-            visited[r[j]][r[j]] = true;
-            q.push({r[j], r[j]});
+            visited[r[j]][c[j]] = true;
+            q.push({r[j], c[j]});
         }
 
         bfs();
