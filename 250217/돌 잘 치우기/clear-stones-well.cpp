@@ -50,8 +50,15 @@ void bfs() {
 int main() {
     cin >> n >> k >> m;
 
+    int total_rock_cnt = 0;
+    int zero_cnt = 0;
+
     for (int i = 0; i < n; i++)
-        for (int j = 0; j < n; j++) cin >> grid[i][j];
+        for (int j = 0; j < n; j++) {
+            cin >> grid[i][j];
+            if(grid[i][j]) total_rock_cnt++;
+            else zero_cnt++;
+        }
 
     for (int i = 0; i < k; i++) {
         cin >> r[i] >> c[i];
@@ -68,17 +75,18 @@ int main() {
     bfs();
 
     int answer = 0;
-    int rock_cnt = 0;
+    int visited_rock_cnt = 0;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             if(visited[i][j][m]) {
-                if(grid[i][j] == 1) rock_cnt++;
+                if(grid[i][j] == 1) visited_rock_cnt++;
                 answer++;
             }
         }
     }
 
-    cout << answer - (rock_cnt - m);
+    if(answer - (total_rock_cnt - m) == zero_cnt) cout << zero_cnt;
+    else cout << answer - (visited_rock_cnt - m);
 
     return 0;
 }
