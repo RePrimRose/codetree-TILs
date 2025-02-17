@@ -4,8 +4,8 @@
 using namespace std;
 
 int n, m;
-int a[100][100];
-bool visited[100][100];
+int a[101][101];
+bool visited[101][101];
 queue<pair<int, int>> q;
 
 bool in_range(int x, int y) {
