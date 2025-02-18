@@ -19,8 +19,9 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         int curr_num = grid[i][0];
-        int cnt = 1;
-        for (int j = 1; j < n; j++) {
+        int cnt = 0;
+
+        for (int j = 0; j < n; j++) {
             if (curr_num == grid[i][j]) {
                 cnt++;
             } else {
@@ -35,8 +36,9 @@ int main() {
         }
 
         curr_num = grid[0][i];
-        cnt = 1;
-        for (int j = 1; j < n; j++) {
+        cnt = 0;
+
+        for (int j = 0; j < n; j++) {
             if (curr_num == grid[j][i]) {
                 cnt++;
             } else {
