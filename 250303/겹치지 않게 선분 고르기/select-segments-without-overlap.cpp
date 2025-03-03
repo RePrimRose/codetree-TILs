@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int n, line_count, answer;
+int n, answer;
 int x1[15], x2[15];
 vector<pair<int, int>> selected_line;
 
@@ -22,18 +22,14 @@ bool is_overlapped(int l1, int r1) {
 
 void f(int pos) {
     if (pos == n) {
-        answer = max(answer, line_count);
+        answer = max(answer, selected_line.size());
         return;
     }
 
     if (!is_overlapped(x1[pos], x2[pos])) {
         selected_line.push_back({x1[pos], x2[pos]});
-        line_count++;
-
         f(pos + 1);
-
         selected_line.pop_back();
-        line_count--;
     }
 
     f(pos + 1);
