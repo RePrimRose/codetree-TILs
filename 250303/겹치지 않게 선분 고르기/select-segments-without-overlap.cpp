@@ -14,6 +14,7 @@ bool is_overlapped(int l1, int r1) {
         tie(l2, r2) = selected_line[i];
 
         if ((l2 <= l1 && l1 <= r2) || (l2 <= r1 && r1 <= r2)) return true;
+        if ((l1 <= l2 && l2 <= r1) || (l1 <= r2 && r2 <= r1)) return true;
     }
 
     return false;
