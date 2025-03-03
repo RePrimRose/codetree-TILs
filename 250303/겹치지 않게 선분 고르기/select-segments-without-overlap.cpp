@@ -22,7 +22,7 @@ bool is_overlapped(int l1, int r1) {
 
 void f(int pos) {
     if (pos == n) {
-        answer = max(answer, selected_line.size());
+        answer = max(answer, (int) selected_line.size());
         return;
     }
 
