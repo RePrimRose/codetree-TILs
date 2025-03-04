@@ -12,6 +12,7 @@ int a[MAX], b[MAX];
 int initial_result[MAX + 1], result[MAX + 1];
 
 vector<pair<int, int>> ladder[MAX + 1];
+vector<pair<int, int>> ladder_copy[MAX + 1];
 
 bool compare(pair<int, int>& a, pair<int, int>& b) {
     return a.second < b.second;
@@ -20,7 +21,7 @@ bool compare(pair<int, int>& a, pair<int, int>& b) {
 int ghost_leg(int pos, int height) {
     while (true) {
         bool moved = false;
-        for (const auto& rope : ladder[pos]) {
+        for (const auto& rope : ladder_copy[pos]) {
             int next_pos, next_height;
             tie(next_pos, next_height) = rope;
 
@@ -39,7 +40,8 @@ int ghost_leg(int pos, int height) {
 
 void find_min_ladder(int pos) {
     if (pos == m) {
-        for (auto& l : ladder) sort(l.begin(), l.end(), compare);
+        for (int i = 1; i <= n; i++) ladder_copy[i] = ladder[i];
+        for (auto& l : ladder_copy) sort(l.begin(), l.end(), compare);
         for (int i = 1; i <= n; i++) result[i] = ghost_leg(i, 0);
         for (int i = 1; i <= n; i++) if (initial_result[i] != result[i]) return;
 
@@ -77,7 +79,8 @@ int main() {
         ladder[x2].push_back({ x1, height });
     }
 
-    for (auto& l : ladder) sort(l.begin(), l.end(), compare);
+    for (int i = 1; i <= n; i++) ladder_copy[i] = ladder[i];
+    for (auto& l : ladder_copy) sort(l.begin(), l.end(), compare);
     for (int i = 1; i <= n; i++) initial_result[i] = ghost_leg(i, 0);
     fill(ladder, ladder + MAX + 1, std::vector<std::pair<int, int>>());
 
